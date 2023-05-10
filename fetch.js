@@ -5,10 +5,10 @@ function myFetch(resource, options = {}){
 
         xhttp.onload = () => {
             if (xhttp.status==200){
-                res(this.response);
+                res(xhttp.response);
             }
             else {
-                rej(new Error("Error: " + this.status));
+                rej(new Error("Error: " + xhttp.status));
             }
         };
 
